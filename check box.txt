@@ -1,0 +1,59 @@
+class MainActivity : AppCompatActivity() {
+    lateinit  var cName:EditText;
+    lateinit var cbZinger:CheckBox;
+    lateinit var cbMZinger:CheckBox;
+    lateinit var cbCrunchy:CheckBox;
+    lateinit var ZQty:EditText;
+    lateinit var MQty:EditText;
+    lateinit var CQty:EditText;
+
+    lateinit var Znormal : RadioButton
+    lateinit var Zspicy   : RadioButton
+
+    lateinit var rgMZ       : RadioGroup
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        cName = findViewById(R.id.etName)
+        ZQty = findViewById(R.id.etZQty);
+        MQty = findViewById(R.id.etMQty);
+        CQty = findViewById(R.id.etCQty);
+        cbZinger = findViewById(R.id.cbZinger);
+        cbMZinger = findViewById(R.id.cbMburg);
+        cbCrunchy = findViewById(R.id.cbCrunchy);
+
+        Znormal = findViewById(R.id.rbZnormal)
+        Zspicy = findViewById(R.id.rbZspicy)
+
+        rgMZ = findViewById(R.id.rgMZinger)
+    }
+    fun create_Btn_Order(view: View) {
+        var zNormal = findViewById<RadioButton>(R.id.rbZnormal);
+
+
+        var str=cName.text.toString();
+        var bill=0;
+var discount=0;
+        if (cbZinger.isChecked)
+        {
+            bill= bill + (500 * ZQty.text.toString().toInt());
+            if ( Zspicy.isChecked)
+                bill = bill + ( 20 * ZQty.text.toString().toInt() ) ;
+        }
+        if (cbMZinger.isChecked)
+        {
+            bill= bill + (600 * MQty.text.toString().toInt());
+        }
+        if (cbCrunchy.isChecked)
+        {
+            bill = bill + (700 * CQty.text.toString().toInt());
+        }
+        if (bill>0) {
+            Toast.makeText(this, "Dear $str your total bill is $bill", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(this,"Please select something",Toast.LENGTH_SHORT).show();
+        }
+        }
