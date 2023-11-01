@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+
+
+
+        <TextView
+            android:id="@+id/activity_game_question_text"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="2"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Question?"></TextView>
+
+        <Button
+            android:id="@+id/activity_game_answer1_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+
+            android:textSize="20sp"
+            android:text="Answer1"/>
+
+        <Button
+            android:id="@+id/activity_game_answer2_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+
+            android:textSize="20sp"
+            android:text="Answer2"/>
+
+        <Button
+            android:id="@+id/activity_game_answer3_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:textSize="20sp"
+            android:text="google"
+            android:onClick="google"
+            />
+
+        <Button
+            android:id="@+id/activity_game_answer4_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+
+            android:textSize="20sp"
+            android:text="Answer4"
+            android:onClick="Answer4"
+            />
+
+
+</LinearLayout>
